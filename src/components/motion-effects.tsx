@@ -46,6 +46,13 @@ export function MotionEffects({ children }: { children: React.ReactNode }) {
 
     const tick = (timestamp: number) => {
       if (isPlaying && !document.hidden) {
+        if (document.documentElement.style.scrollBehavior !== "auto") {
+          document.documentElement.style.scrollBehavior = "auto";
+        }
+        if (document.body.style.scrollBehavior !== "auto") {
+          document.body.style.scrollBehavior = "auto";
+        }
+
         const previousTime = lastFrameTime ?? timestamp;
         const elapsedSeconds = Math.min((timestamp - previousTime) / 1000, 0.25);
         const maxScroll = Math.max(
