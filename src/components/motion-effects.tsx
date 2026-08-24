@@ -16,7 +16,7 @@ export function MotionEffects({ children }: { children: React.ReactNode }) {
       return;
     }
 
-    let isPlaying = false;
+    let isPlaying = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     let pixelsPerSecond = 90;
     let frameId = 0;
     let lastFrameTime: number | null = null;
