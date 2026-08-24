@@ -126,12 +126,6 @@ h3 { line-height: 1.1; }
 .portfolio-mosaic figcaption span, .portfolio-full figcaption strong { font-family: var(--font-sans), Montserrat, Arial, sans-serif; font-size: 1.2rem; font-weight: 650; }.portfolio-mosaic figcaption small, .portfolio-full figcaption span { font-size: .84rem; letter-spacing: .04em; text-align: right; text-transform: uppercase; }
 .portfolio-mosaic figure:nth-child(1) { min-height: 35rem; }.portfolio-mosaic figure:nth-child(4) { min-height: 30rem; }
 
-/* FAQ */
-.horizontal-accordion { display: flex; flex-direction: column; gap: .6rem; }
-.horizontal-accordion details { padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius-md); background: rgba(255,255,255,.32); }
-.horizontal-accordion summary { min-height: 3rem; display: flex; align-items: center; font-family: var(--font-sans), Montserrat, Arial, sans-serif; font-size: 1.4rem; font-weight: 650; cursor: pointer; }
-.horizontal-accordion p { color: var(--muted); }
-
 /* Catalog */
 .catalog-layout, .builder, .booking-page, .content-page, .legal-page { width: var(--container); min-height: 70svh; margin-inline: auto; padding-block: clamp(7rem, 11vw, 11rem); }
 .catalog-toolbar, .page-intro { margin-bottom: 3.5rem; }
@@ -261,7 +255,6 @@ h3 { line-height: 1.1; }
   .popular-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }.popular-card:nth-child(even) { margin-top: 3rem; }
   .popular-card { min-height: 29rem; }.popular-image { height: 17rem; }
   .portfolio-mosaic { grid-template-columns: 1.25fr .75fr .75fr; grid-template-rows: repeat(2, 18rem); }.portfolio-mosaic figure { min-height: 0 !important; }.portfolio-mosaic figure:nth-child(1) { grid-row: span 2; }.portfolio-mosaic figure:nth-child(4) { grid-column: span 2; }
-  .horizontal-accordion { min-height: 24rem; flex-direction: row; }.horizontal-accordion details { flex: 1; display: flex; flex-direction: column; transition: flex .45s cubic-bezier(.2,.8,.2,1), background .3s ease; }.horizontal-accordion details:hover, .horizontal-accordion details:focus-within, .horizontal-accordion details[open] { flex: 2.1; color: #fff; background: var(--plum); }.horizontal-accordion details:hover p, .horizontal-accordion details:focus-within p, .horizontal-accordion details[open] p { color: rgba(255,255,255,.72); }.horizontal-accordion summary { flex: 1; align-items: end; font-size: 2rem; }
   .catalog-toolbar { grid-template-columns: 1fr auto; align-items: end; }.price-review { justify-self: end; }
   .service-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }.service-card-main { grid-template-columns: 5rem minmax(0,1fr); }.service-thumb { height: 5rem; }.service-card-main > strong { grid-column: 2; grid-row: auto; align-self: end; }
   .wizard-shell { grid-template-columns: 8.5rem minmax(0,1fr); align-items: start; }.wizard-progress { position: sticky; top: 7rem; flex-direction: column; overflow: visible; }.wizard-progress li { grid-template-columns: 2.2rem 1fr; justify-items: start; align-items: center; text-align: left; }.wizard-progress li small { font-size: .84rem; }.wizard-panel { min-height: 34rem; padding: 2rem; }
