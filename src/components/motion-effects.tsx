@@ -20,6 +20,11 @@ export function MotionEffects({ children }: { children: React.ReactNode }) {
     let pixelsPerSecond = 90;
     let frameId = 0;
     let lastFrameTime: number | null = null;
+    const previousHtmlScrollBehavior = document.documentElement.style.scrollBehavior;
+    const previousBodyScrollBehavior = document.body.style.scrollBehavior;
+
+    document.documentElement.style.scrollBehavior = "auto";
+    document.body.style.scrollBehavior = "auto";
 
     const handleMessage = (event: MessageEvent) => {
       if (
@@ -65,6 +70,8 @@ export function MotionEffects({ children }: { children: React.ReactNode }) {
     return () => {
       window.removeEventListener("message", handleMessage);
       window.cancelAnimationFrame(frameId);
+      document.documentElement.style.scrollBehavior = previousHtmlScrollBehavior;
+      document.body.style.scrollBehavior = previousBodyScrollBehavior;
     };
   }, []);
 
