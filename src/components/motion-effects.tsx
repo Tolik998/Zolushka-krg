@@ -49,7 +49,9 @@ export function MotionEffects({ children }: { children: React.ReactNode }) {
         );
         const nextScroll = window.scrollY + pixelsPerSecond * elapsedSeconds;
 
-        window.scrollTo(0, nextScroll >= maxScroll ? 0 : nextScroll);
+        const targetScroll = nextScroll >= maxScroll ? 0 : nextScroll;
+        document.documentElement.scrollTop = targetScroll;
+        document.body.scrollTop = targetScroll;
       }
 
       lastFrameTime = timestamp;
