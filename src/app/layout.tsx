@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { siteUrl } from "@/lib/i18n";
 import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin", "cyrillic"], variable: "--font-sans", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: { default: "Zolushka.krg — салон красоты в Караганде", template: "%s | Zolushka.krg" },
   description: "Маникюр, педикюр, брови и ресницы в Караганде. Онлайн-запись в 4 и 6 рук.",
   applicationName: "Zolushka.krg",
