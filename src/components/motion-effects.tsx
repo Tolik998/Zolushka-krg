@@ -54,7 +54,7 @@ export function MotionEffects({ children }: { children: React.ReactNode }) {
         }
 
         const previousTime = lastFrameTime ?? timestamp;
-        const elapsedSeconds = Math.min((timestamp - previousTime) / 1000, 0.25);
+        const elapsedSeconds = Math.min((timestamp - previousTime) / 1000, 0.05);
         const maxScroll = Math.max(
           0,
           document.documentElement.scrollHeight - window.innerHeight,
